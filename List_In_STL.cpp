@@ -25,7 +25,6 @@ int main(){
     ll.push_back(2);
     ll.push_back(3);
     ll.push_back(4);
-
     printList(ll);
 
     cout<<ll.size()<<endl;
@@ -34,10 +33,8 @@ int main(){
     ll.pop_back();
 
     list<int>::iterator itr;
-
     itr = ll.begin();
     advance(itr,4);
-
     ll.insert(itr,99);
 
     printList(ll);
