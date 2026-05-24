@@ -34,8 +34,11 @@ int main(){
 
     list<int>::iterator itr;
     itr = ll.begin();
-    advance(itr,4);
+    advance(itr,2);
     ll.insert(itr,99);
+
+    cout<<ll.front()<<endl;
+    cout<<ll.back()<<endl;
 
     printList(ll);
     return 0;
