@@ -50,12 +50,26 @@ void push_back(int val)
 	}
 	}
 	
+	void pop_front()
+	{
+		Node* temp = head;
+		
+		head = head->next;
+		
+		if(head != NULL)
+		{
+			head->prev = NULL;
+		}
+		temp->next = NULL;
+		delete temp;
+	}
+	
 	void print_ll(){
 		Node* temp = head;
 		
 		while(temp != NULL)
 		{
-			cout<<temp->data<<"->";
+			cout<<temp->data<<"<= >";
 			temp = temp->next;
 		}
 		cout<<"NULL";
@@ -83,7 +97,10 @@ int main()
 	dll.push_back(3);
 	dll.push_back(4);
 	dll.push_back(5);
-
-dll.print_ll();
+	
+	
+	dll.print_ll();
+	dll.pop_front();
+	dll.print_ll();
 	return 0;
 }
